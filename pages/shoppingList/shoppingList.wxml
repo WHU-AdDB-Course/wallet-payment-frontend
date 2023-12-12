@@ -1,0 +1,29 @@
+<!--pages/shoppingList/shoppingList.wxml-->
+
+<!--订单内容-->
+<view class="order_content">
+  <!-- 头部 -->
+  <view class="order_title">订单详情</view>
+
+  <!-- 商品信息 -->
+  <view class="order_main">
+    <view class="order_item">
+      <navigator class="order_img_wrap">
+        <image style="height: 150rpx;" src="{{pictureUrl}}"></image>
+      </navigator>
+      <view class="order_info_wrap">
+        <view class="product_name">{{name}}</view>
+        <view class="product_price_wrap">
+          <view class="product_price">{{price}}积分</view>
+          <view class="order_num_tool">
+            <view class="num_edit" bindtap="handleItemNumEdit" data-operation="{{-1}}">-</view>
+            <view class="product_num">{{number}}</view>
+            <view class="num_edit" bindtap="handleItemNumEdit" data-operation="{{1}}">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+

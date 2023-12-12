@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'iconfont';  /* Project id 3756075 */
+  src: 
+       url('//at.alicdn.com/t/c/font_3756075_oaeig5pwx2n.woff2?t=1668082681373') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3756075_oaeig5pwx2n.woff?t=1668082681373') format('woff'),
+       url('//at.alicdn.com/t/c/font_3756075_oaeig5pwx2n.ttf?t=1668082681373') format('truetype');
+}
+
+.iconfont{
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*搜索*/
+.icon_search::before{
+  content: "\effa";
+}
+
+/*聊天室*/
+.icon_conversation::before{
+  content: "\f01c";
+}
+
+/*主菜单*/
+.icon_mainmenu::before{
+  content: "\f080";
+}
+
+/*发布*/
+.icon_publish::before{
+  content: "\f0a2";
+}
+
+/*店铺*/
+.icon_shopping::before{
+  content: "\f010";
+}
+
+/*教材*/
+.icon_book::before{
+  content: "\e811";
+}
+
+/*校园资讯*/
+.icon_notice::before{
+  content: "\e643";
+}
+
+/*问卷*/
+.icon_questionnaire::before{
+  content: "\e654";
+}
+
+/*地图*/
+.icon_map::before{
+  content: "\e63f";
+}
+
+/*论文*/
+.icon_paper:before{
+  content: "\e615";
+}
+
+/*交通*/
+.icon_traffic::before{
+  content: "\e634";
+}
+
+/*账号*/
+.icon_user::before{
+  content: "\e66c";
+}
+
+/*密码*/
+.icon_password::before{
+  content: "\e8b2";
+}

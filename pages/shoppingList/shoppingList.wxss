@@ -1,0 +1,69 @@
+/* pages/shoppingList/shoppingList.wxss */
+.order_content{
+  padding-bottom: 90rpx;
+}
+.order_content .order_title {
+  padding: 20rpx;
+  font-size: 36rpx;
+  color: blue;
+  border-top: 1rpx solid blue;
+  border-bottom: 1rpx solid blue;
+}
+.order_content .order_main .order_item{
+  display: flex;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.order_content .order_main .order_item .order_img_wrap{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order_content .order_main .order_item .order_img_wrap image{
+  width: 80%;
+}
+
+.order_content .order_main .order_item .order_info_wrap{
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.order_content .order_main .order_item .order_info_wrap .product_name{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #666;
+}
+.order_content .order_main .order_item .order_info_wrap .product_price_wrap{
+  display: flex;
+  justify-content: space-between;
+}
+
+.order_content .order_main .order_item .order_info_wrap .product_price_wrap .product_price{
+  color: red;
+  font-size: 34rpx;
+}
+.order_content .order_main .order_item .order_info_wrap .product_price_wrap .order_num_tool{
+  display: flex;
+}
+
+.order_content .order_main .order_item .order_info_wrap .product_price_wrap .order_num_tool .num_edit{
+  display: flex;
+  width: 55rpx;
+  height: 55rpx;
+  justify-content: center;
+  align-items: center;
+  border: 1rpx solid #ccc;
+}
+
+.order_content .order_main .order_item .order_info_wrap .product_price_wrap .order_num_tool .product_num{
+  display: flex;
+  width: 55rpx;
+  height: 55rpx;
+  justify-content: center;
+  align-items: center;
+}

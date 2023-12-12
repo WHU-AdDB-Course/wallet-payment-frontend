@@ -1,0 +1,66 @@
+/* pages/shop/shop.wxss */
+.nx_swiper swiper{
+  width:750rpx;
+  height: 400rpx;
+}
+.nx_swiper swiper image{
+  width:750rpx;
+  height: 400rpx;
+}
+/* 宫格列表 */
+.nx_congar{
+  margin: 20rpx;
+}
+.nx_congar_title{
+  padding: 20rpx;
+  color:#666;
+  font-weight: bold;
+  font-size: 35rpx;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  border-radius: 10rpx 10rpx 0 0;
+}
+.nx_congar_list{
+  padding: 20rpx 20rpx 0 20rpx;
+  /* 横着展示 */
+  display: flex;
+  /* 居中对齐 */
+  flex-wrap: wrap;   
+  background-color: white;
+  border-radius: 0 0 10rpx 10rpx;
+}
+.nx_congar_list navigator{
+  margin-bottom: 20rpx;
+  text-align: center;
+  color: #666;
+}
+.nx_congar_item_3{
+  width: 33.33%;
+}
+
+.nx_congar_item_3 image{
+  width:90%;
+  height: 180rpx;
+}
+.nx_item_name{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.movable-area{
+  pointer-events:none;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.movable-view{ 
+  pointer-events:auto;
+  height: 50px;
+  width: 50px;
+}

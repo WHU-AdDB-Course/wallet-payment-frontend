@@ -1,0 +1,44 @@
+<!--pages/order/order.wxml-->
+<!--订单内容-->
+<view class="order_content">
+  <!-- 头部 -->
+  <view class="order_title">订单详情</view>
+
+  <!-- 商品信息 -->
+  <view class="order_main">
+    <view class="order_item">
+      <navigator class="order_img_wrap">
+        <image style="height: 150rpx;" src="{{pictureUrl}}"></image>
+      </navigator>
+      <view class="order_info_wrap">
+        <view class="product_name">{{name}}</view>
+        <view class="product_price_wrap">
+          <view class="product_price">{{price}}积分</view>
+          <view class="order_num_tool">
+            <view class="num_edit" bindtap="handleItemNumEdit" data-operation="{{-1}}">-</view>
+            <view class="product_num">{{number}}</view>
+            <view class="num_edit" bindtap="handleItemNumEdit" data-operation="{{1}}">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    
+    <view class="imgBox">
+      <textarea maxlength="-1" placeholder="请输入地址…" bindinput="textareaBindinput" class="infoBox"/>
+    </view>
+    <view class="imgBox">
+      <input type="text" placeholder="请输入手机号..." bindinput="inputBindinput" class="nameBox"/>
+    </view>
+  </view>
+
+</view>
+
+<!-- 底部工具栏 -->
+<view class="footer_tool">
+  <view class="total_price_wrap">
+    合计：<text class="total_price_text">{{totalPrice}}</text> 积分
+    <view>共<text style="color: blue; margin-left: 10rpx; margin-right: 10rpx;">{{number}}</text>件</view>
+  </view>
+  <view class="order_submit_wrap" bindtap="submitOrder">提交订单</view>
+</view>

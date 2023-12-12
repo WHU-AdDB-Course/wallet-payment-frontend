@@ -1,0 +1,33 @@
+<!--pages/book/book.wxml-->
+<view style="position:fixed; top:0; width: 750rpx; background:#A1FFCE ;">
+  <!-- <view class='page_row' >
+      <view class="search" style="width: 720rpx; height: 64rpx; display: block; box-sizing: border-box">
+        <view class="df search_arr">
+          <icon class="searchcion" size='16' type='search' style="position: absolute; left: 35rpx; top: 8rpx"></icon>
+          <input style="width: 350rpx; height: 60rpx; display: block; box-sizing: border-box" class="sousuo" disabled placeholder="搜索" bindtap='search'/>
+        </view>
+      </view>
+  </view> -->
+  <!--顶部标题栏-->
+  <view class='page-header'>
+      <text class='page-title' style="position: relative; left: 85rpx; top: 0rpx">{{title}}</text>
+      <view class="df search_arr" style="width: 150rpx; height: 49rpx; display: block; box-sizing: border-box; position: relative; left: 172rpx; top: 20rpx">
+        <icon class="searchcion" size='16' type='search' style="position: absolute; left: -40rpx; top: -2rpx"></icon>
+        <input style="position: relative; left: -14rpx; top: -8rpx; display: block; width: 70rpx; height: 60rpx; box-sizing: border-box"  placeholder="搜索"></input>
+      </view>
+  </view>
+</view>
+
+
+<scroll-view scroll-y="true" style="height: 1331rpx; width: 750rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 87rpx">
+  <view class='page-body' wx:for="{{list}}" wx:key="id"  enable-flex="true" >
+    <navigator url="/pages/item/item?title={{item.name}}&pictureUrl={{item.pictureUrl}}&url={{item.url}}&message={{item.message}}&id={{title}}">
+      <view class='item' >
+        <image class='poster' src='{{item.pictureUrl}}'></image>
+        <view class='meta'>
+          <text class='title'>{{item.name}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</scroll-view>

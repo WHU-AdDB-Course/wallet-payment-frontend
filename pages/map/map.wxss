@@ -1,0 +1,12 @@
+/* pages/map/map.wxss */
+.page-header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1rpx solid #ccc;
+}
+.page-title {
+  padding: 20rpx 40rpx;
+  color: rgb(2, 2, 2);
+  font-size: 38rpx;
+  text-align: center;
+}

@@ -1,0 +1,101 @@
+<!--pages/publish/publish.wxml-->
+<!--index.wxml-->
+<view>
+
+<!--单选框组-->
+<radio-group bindchange="changed" style="margin-bottom: 5px; margin-left: 3px; margin-top: 5px;">
+  <radio wx:for-items="{{items}}" wx:key="id" value="{{item.id}}" checked="{{item.choose}}" style="width: 247rpx; height: 50rpx; display: inline-block; box-sizing: border-box">{{item.name}}</radio>
+</radio-group>
+
+<!--校园资讯表单-->
+<form bindsubmit="" hidden="{{isShow}}">
+  <view style="display: flex; margin-left: 3px;">
+    <text>标题：</text>
+    <input type="text" placeholder="请输入标题" style="border: 1px solid black; width: 332px;"/>
+  </view>
+  <view style="display: flex; margin-top: 5px; margin-left: 3px;">
+    <text>内容：</text>
+    <textarea value="" placeholder="请输入内容…" style="border: 1px solid black; width: 332px;"/>
+  </view>
+  <view style="margin-top: 5px;">
+    <button form-type="submit" style="border: 1px solid black;">提交</button>
+  </view>
+</form>
+
+<!--教材表单-->
+<form bindsubmit="" hidden="{{isShow2}}">
+  <view style="display: flex; margin-left: 3px;">
+    <text>教材名称：</text>
+    <input type="text" placeholder="请输入教材名称" style="border: 1px solid black; width: 300px;"/>
+  </view>
+  <view style="display: flex; margin-top: 5px; margin-left: 3px;">
+    <text>教材简介：</text>
+    <textarea value="" placeholder="请输入教材简介…" style="border: 1px solid black;"/>
+  </view>
+  <view style="margin-top: 5px;">
+    <button bindtap="upload" style="border: 1px solid black;">上传文件</button>
+  </view>
+  <view style="margin-top: 5px;">
+    <button form-type="submit" style="border: 1px solid black;">提交</button>
+  </view>
+</form>
+
+<!--问卷表单-->
+<form bindsubmit="" hidden="{{isShow3}}">
+  <view style="display: flex;">
+    <button bindtap="add1" style="border: 1px solid black;">单选题</button>
+    <button bindtap="add2" style="border: 1px solid black;">多选题</button>
+    <button bindtap="add3" style="border: 1px solid black;">问答题</button>
+  </view>
+
+  <!--单选题-->
+  <view wx:for="{{array1}}" wx:key="*this" style="display: block;">
+    <view style="margin-top: 10px; border:1px solid black;">
+      <view style="display: flex; margin-left: 3px; margin-top: 3px;">
+        <text>问题</text>
+        <input type="text" placeholder="请输入问题…" style="border: 1px solid black; width: 343px; margin-left: 5px;"/>
+      </view>
+      <view style="margin-left: 3px; margin-top: 5px; margin-bottom: 3px;">
+        <radio-group bindchange="">
+          <radio style="width: 247rpx; height: 50rpx;">选项1</radio>
+          <radio style="width: 247rpx; height: 50rpx;">选项2</radio>
+          <radio style="width: 247rpx; height: 50rpx;">选项3</radio>
+        </radio-group>
+      </view>
+    </view>
+  </view>
+  <!--多选题-->
+  <view wx:for="{{array2}}" wx:key="*this" style="display: block;">
+    <view style="margin-top: 10px; border:1px solid black;">
+      <view style="display: flex; margin-left: 3px; margin-top: 3px;">
+        <text>问题</text>
+        <input type="text" placeholder="请输入问题…" style="border: 1px solid black; width: 343px; margin-left: 5px;"/>
+      </view>
+      <view style="margin-left: 3px; margin-top: 5px; margin-bottom: 3px;">
+        <checkbox-group bindchange="">
+          <checkbox style="width: 247rpx; height: 50rpx;">选项1</checkbox>
+          <checkbox style="width: 247rpx; height: 50rpx;">选项2</checkbox>
+          <checkbox style="width: 247rpx; height: 50rpx;">选项3</checkbox>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+  <!--问答题-->
+  <view wx:for="{{array3}}" wx:key="*this" style="display: block;">
+    <view style="margin-top: 10px; border:1px solid black;">
+      <view style="display: flex; margin-left: 3px; margin-top: 3px;">
+        <text>问题</text>
+        <input type="text" placeholder="请输入问题…" style="border: 1px solid black; width: 343px; margin-left: 5px;"/>
+      </view>
+      <view style="display: flex; margin-left: 3px; margin-bottom: 3px;">
+        <text>回答</text>
+        <textarea value="" style="border: 1px solid black; margin-left: 5px; margin-top: 5px; width: 343px;"/>
+      </view>
+    </view>
+  </view>
+  <view style="margin-top: 10px;">
+    <button form-type="submit" style="border: 1px solid black;">提交</button>
+  </view>
+</form>
+
+</view>

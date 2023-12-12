@@ -1,0 +1,169 @@
+/* pages/login/login.wxss */
+@import '../../utils/iconFont.wxss';
+/* 最大的父元素 */
+.v1{
+  display: block;
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  background: #A1FFCE;
+}
+
+/* 登录区域 */
+.v1 .v2{
+  position: relative;
+  margin-top: 150rpx;
+  left: 100rpx; 
+  width: 545rpx;
+  height: 750rpx;
+  background: #ffcccc;
+  border-radius: 50rpx;
+}
+/* 登录区域的文本 */
+.v1 .v2 .dltext{
+  margin-top: 50rpx;
+  position: absolute;
+  margin-left:80rpx;
+  width: 150rpx;
+  height: 100rpx;
+  font-size: 60rpx;
+  font-family: Helvetica;
+  color: #000000;
+  line-height: 100rpx;
+  letter-spacing: 2rpx;
+}
+
+/* 图标+输入框+下划线的父容器view */
+.v1 .v2 .studentId{
+  margin-top: 200rpx;
+  margin-left: 35rpx;
+  position: absolute;
+  display: flex;
+  width:470rpx ;
+  height: 80rpx ;
+  border-bottom: 3rpx solid rgb(58, 57, 57);
+}
+/* 图标 */
+.v1 .v2 .studentId .ph{
+  margin-top: 5rpx;
+  margin-left: 30rpx;
+  width: 55rpx;
+  height: 55rpx;
+}
+/* 学号输入框 */
+.v1 .v2 .studentId input{
+  width: 200rpx;
+  font-size: 25rpx ;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+}
+
+/* 密码图标+输入框+小眼睛图标+下划线父容器view */
+.v1 .v2 .password{
+  margin-top: 400rpx;
+  margin-left: 35rpx;
+  position: absolute;
+  display: flex;
+  width: 470rpx ;
+  height: 80rpx ;
+  border-bottom: 3rpx solid rgb(58, 57, 57);
+}
+/* 密码图标 */
+.v1 .v2 .password .ps{
+  margin-top: 5rpx;
+  margin-left: 30rpx;
+  width: 55rpx;
+  height: 55rpx;
+}
+/* 眼睛 图标*/
+.v1 .v2 .password .eye{
+  margin-top: 5rpx;
+  margin-left: 65rpx;
+  width: 55rpx;
+  height: 55rpx;
+}
+/* 密码输入框 */
+.v1 .v2 .password input{
+  width: 200rpx;
+  font-size: 25rpx ;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+}
+
+/* 忘记密码父容器 */
+.v1 .v2 .forget{
+  font-size: 25rpx;
+  margin-left: 85rpx;
+  width: 370rpx;
+  margin-top: 540rpx;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 登录按钮容器view */
+.v1 .v2 .login{
+  width: 375rpx;
+  height: 50rpx;
+  position: absolute;
+  margin-top: 600rpx;
+  margin-left: 85rpx;
+}
+/* 登录按钮 */
+.v1 .v2 .login button{
+  padding: 0rpx;
+  line-height: 45rpx;
+  font-size: 25rpx;
+  width: 100%;
+  height: 100%;
+  border-radius: 30rpx;
+  border: 1px solid black;
+}
+/* 蒙层 */
+.popup-box{
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+/* 中 */
+.info-center{
+  position: fixed;
+  z-index: 999;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.row-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15rpx;
+  font-size: 55rpx;
+}
+.row-btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1rpx dashed #f1f1f1;
+}
+.row-btn view{
+  flex: 1;
+  text-align: center;
+  margin: 20rpx 10%;
+  padding: 12rpx 0;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+}
+.right-btn{
+  background-color: #33ccff;
+  color: white;
+}
+

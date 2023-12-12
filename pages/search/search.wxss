@@ -1,0 +1,48 @@
+/* pages/search/search.wxss */
+@import '../../utils/iconFont.wxss';
+.search{
+  width: 98%;
+}
+.search_arr {
+  border: 1px solid #d0d0d0;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+.search_arr input{
+  margin-left: 60rpx;
+  height: 60rpx;
+  border-radius: 5px;
+}
+.sousuo {
+  padding-left: 38%;
+  width: 15%;
+  line-height: 150%;
+  text-align: center;
+}
+.page_row{
+  display: flex;
+  flex-direction: row
+}
+.searchcion {
+  margin: 10rpx 10rpx 10rpx 10rpx;
+  position: absolute;
+  margin-left:38%;
+  z-index: 2;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+ }
+ .iconMsg{
+  font-size: 120px;
+  width: 240rpx; 
+  height: 240rpx; 
+  display: inline-block; 
+  box-sizing: border-box;
+ }
+ .v1{
+  display: block;
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  background: #A1FFCE;
+}

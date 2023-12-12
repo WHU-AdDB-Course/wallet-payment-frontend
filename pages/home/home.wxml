@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <view class="menu-box {{show_menu && 'active'}}">
+    <block wx:for="{{menu}}" wx:key="menu">
+      <view style="--n:{{index}};--deg:{{360/ menu.length}}deg" class="menu-box-item {{currIndex===index && 'active'}}" catchtap="clickActive" data-index="{{index}}">
+        <icon class="iconfont icon {{item.icon}}" style="--deg:{{-360/ menu.length}}deg" ></icon>
+      </view>
+    </block>
+    <view class="menu-box-active" style="--n:{{currIndex}};--deg:{{360/ menu.length}}deg"></view>
+  </view>
+  <view class="menu-add-box {{show_menu && 'active'}}" catchtap="showMenu" >
+    <icon class="iconfont icon icon_mainmenu"></icon>
+  </view>
+  
+</view>
