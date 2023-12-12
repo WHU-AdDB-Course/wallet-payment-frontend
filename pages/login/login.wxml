@@ -36,7 +36,7 @@
 wx:if="{{showIndex=='1'}}">
   <view>
     <view class="row-info">
-      <view>学号或密码有误</view>
+      <view>{{errorMsg}}</view>
       <view>请重新输入</view>
     </view>
     <view class="row-btn">

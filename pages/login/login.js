@@ -10,6 +10,7 @@ Page({
     info:{},
     username:'',
     password:'',
+    errorMsg:'',
     height:'',//屏幕高度
     showIndex:null,//打开弹窗的对应下标
   },
@@ -25,7 +26,7 @@ Page({
   },
   login(){
     let info={
-      username:this.data.username,
+      phone:this.data.username,
       password:this.data.password,
     }
     console.log(info)
@@ -34,13 +35,14 @@ Page({
       method:"POST",
       data: info,}).then(res =>{
         console.log(res);
-        if(res.code==="200"){
+        if(res.code===0){
           wx.navigateTo({url: '../../pages/home/home'})
           app.globalData.id=res.data.id
         }
         else{
           this.setData({
-            showIndex:1
+            showIndex:1,
+            errorMsg: res.message
           })
         }
     })
