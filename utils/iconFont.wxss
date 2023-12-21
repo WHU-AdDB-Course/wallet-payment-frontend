@@ -5,6 +5,13 @@
        url('//at.alicdn.com/t/c/font_3756075_oaeig5pwx2n.woff?t=1668082681373') format('woff'),
        url('//at.alicdn.com/t/c/font_3756075_oaeig5pwx2n.ttf?t=1668082681373') format('truetype');
 }
+@font-face {
+  font-family: 'iconfont';  /* Project id 4372897 */
+  src: 
+       url('//at.alicdn.com/t/c/font_4372897_gxh3oj3mdg.woff2?t=1703058593428') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4372897_gxh3oj3mdg.woff?t=1703058593428') format('woff'),
+       url('//at.alicdn.com/t/c/font_4372897_gxh3oj3mdg.ttf?t=1703058593428') format('truetype');
+}
 
 .iconfont{
   font-family: "iconfont" !important;
@@ -77,4 +84,14 @@
 /*密码*/
 .icon_password::before{
   content: "\e8b2";
+}
+
+/* 个人信息 */
+.icon_person::before{
+  content: "\f018";
+}
+
+/* 钱包 */
+.icon_wallet::before{
+  content: "\effe";
 }

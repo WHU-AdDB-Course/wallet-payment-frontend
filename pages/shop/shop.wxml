@@ -1,7 +1,7 @@
 <!--pages/shop/shop.wxml-->
 <view class="index">
   <!-- 轮播图开始 -->
-  <view class="nx_swiper">
+  <!-- <view class="nx_swiper">
     <swiper autoplay indicator-dots circular interval="2000">
       <swiper-item wx:for="{{goodsInfoCarouselList}}" wx:key="id">
         <navigator url="/pages/goodsInfo/goodsInfo?id={{item.itemId}}">
@@ -9,22 +9,22 @@
         </navigator>
       </swiper-item>
     </swiper>
-  </view>
+  </view> -->
   <!-- 轮播图结束 -->
   <!-- 所有商品开始 -->
-  <view class="nx_congar">
-    <view class="nx_congar_title">商品列表</view>
-    <view class="nx_congar_list">
-      <navigator class="nx_congar_item_3" wx:for="{{list}}" wx:for-item="item" wx:key="id" url="/pages/goodsInfo/goodsInfo?id={{item.itemId}}">
-        <image mode="scaleToFill" src="{{item.pictureUrl}}"></image>
-        <view class="nx_item_name">{{item.productName}}</view>
-        <view style="font-size: 22rpx; margin-top: 10rpx;">
-          <view style="color: red;">{{item.price}}积分</view>
-        </view>
-      </navigator>
-    </view>
+<view class="nx_congar">
+  <view class="nx_congar_title">商品列表</view>
+  <view class="nx_congar_list">
+    <navigator class="nx_congar_item_3" wx:for="{{list}}" wx:for-item="item" wx:key="id" url="/pages/order/order?id={{item.commodityId}}">
+      <image mode="scaleToFill" src="{{item.pictureUrl}}"></image>
+      <view class="nx_item_name">{{item.commodityName}}</view>
+      <view style="font-size: 22rpx; margin-top: 10rpx;">
+        <view style="color: red;">{{item.value}}元</view>
+      </view>
+    </navigator>
   </view>
-  <!-- 所有商品结束 -->
+</view>
+<!-- 所有商品结束 -->
 </view>
 <movable-area class="movable-area">
     <movable-view class="movable-view" direction="all" bindtap="ToShoppingList" >

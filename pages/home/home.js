@@ -4,16 +4,16 @@ Page({
     menu_add: "iconfont",
     menu: [
       {
+        icon: "icon_wallet",
+        name: "钱包",
+      },
+      {
         icon: "icon_search",
-        name: "搜索",
+        name: "查询",
       },
       {
-        icon: "icon_conversation",
-        name: "聊天室",
-      },
-      {
-        icon:"icon_publish",
-        name:"发布",
+        icon:"icon_person",
+        name:"个人信息",
       },
       {
         icon:"icon_shopping",
@@ -39,17 +39,17 @@ Page({
     switch (index) {
       case 0:
         wx.navigateTo({
-          url: '../../pages/search/search'
+          url: '../../pages/wallet/wallet'
         });
         break;
       case 1:
         wx.navigateTo({
-          url: '../../pages/talk/talk'
+          url: '../../pages/record/record'
         });
         break;
       case 2:
         wx.navigateTo({
-          url: '../../pages/index/index'
+          url: '../../pages/personPage/personPage'
         });
         break;
       case 3:

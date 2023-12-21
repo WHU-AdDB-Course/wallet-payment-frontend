@@ -9,24 +9,28 @@ Page({
   data: {
     pictureUrl:'',
     name:'',
-    price:'',
+    price:0.00,
     number:1,
-    totalPrice:0,
+    totalPrice:0.00,
     productId:0,
     phone:'',
     address:'',
+    accountTypeList:[],
+    indexType:0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    request({url:'/product/'+options.id}).then(res=>{
+    console.log(options.id)
+    request({url:'/commodity/get-commodity?commodityId='+options.id}).then(res=>{
+      console.log(res)
       this.setData({
-        pictureUrl:res.pictureUrl,
-        name:res.productName,
-        price:res.price,
-        totalPrice:this.data.number * res.price,
+        // pictureUrl:res.pictureUrl,
+        name:res.data.name,
+        price:res.data.value,
+        totalPrice:this.data.number * res.data.value,
         productId:parseInt(options.id),
       })
     })
@@ -46,7 +50,7 @@ Page({
         number:this.data.number-1,
       })
       this.setData({
-        totalPrice:this.data.number * this.data.price,
+        totalPrice:(this.data.number * this.data.price).toFixed(2),
       })
     }
     else if(operation === 1) {
@@ -54,7 +58,7 @@ Page({
         number:this.data.number+1,
       })
       this.setData({
-        totalPrice:this.data.number * this.data.price,
+        totalPrice:(this.data.number * this.data.price).toFixed(2),
       })
     }
   },
@@ -78,40 +82,30 @@ Page({
   //提交订单
   submitOrder(){
     let info={
-      productId:this.data.productId,
+      commodityId:this.data.productId,
       userId:app.globalData.id,
-      price:parseFloat(this.data.price),
-      address:this.data.address,
-      quantity:this.data.number,
-      productName:this.data.name,
-      phone:this.data.phone,
+      commodityNum:this.data.number,
+      bankAccountId:this.data.accountTypeList[this.data.indexType].accountId,
     }
     console.log(info)
     request({
-      url:'/orderForm/insert',
+      url:'/commodity/purchase',
       method:"POST",
       data: info,}).then(res =>{
         console.log(res);
-        if (res.code==="200") {
+        if (res.code===0) {
           wx.navigateBack({
             delta: 1
           });
           wx.showToast({
-            title: '提交成功',
+            title: '购买成功',
             icon: 'success',
             duration: 2000//持续的时间
           })  
         }
-        else if(res.code==="400"){
+        else{
           wx.showToast({
-            title: res.msg,
-            icon:'error',
-            duration: 2000//持续的时间
-          })  
-        }
-        else if(res.code==="600"){
-          wx.showToast({
-            title: res.msg,
+            title: res.data.message,
             icon:'error',
             duration: 2000//持续的时间
           })  
@@ -123,7 +117,21 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    request({
+      url:'/bankAccount/user-list?userId=' + app.globalData.id,
+      method:"GET",}).then(res =>{
+        console.log(res)
+        if (res.code===0) {
+          this.setData({
+            accountTypeList:res.data
+          })
+        }
+      })
+  },
+  bindPickerChange(e){
+    this.setData({
+      indexType:e.detail.value
+    })
   },
 
   /**

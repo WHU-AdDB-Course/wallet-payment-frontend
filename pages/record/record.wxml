@@ -1,0 +1,58 @@
+<!--pages/record/record.wxml-->
+<view class="box">
+  <view class="level nav">
+    <view class="dot"></view>
+    <view class="title">搜索条件</view>
+    <!-- <button class="search">搜索</button> -->
+    <view class="level btn-area">
+      <button type="primary" formType="submit" style="width: 197rpx; height: 90rpx; display: block; box-sizing: border-box; left: 380rpx; top: 0rpx; position: relative" bindtap="searchButton">搜索</button>
+    </view>
+  </view>
+  <view class="row">
+    <picker bindchange="bindConditionPickerChange" value="{{indexCondition}}" range="{{conditionList}}" >
+      <text>{{conditionList[indexCondition]}}</text>
+      <text class="triangle">▼:</text>
+    </picker>
+    <view>
+      <view class="right" wx:if="{{indexCondition == 0}}">
+        <input bindinput="inputBindtap" placeholder="请输入手机号" type="number" />
+      </view>
+      <view class="right" wx:if="{{indexCondition == 1}}">
+        <input bindinput="inputBindtap" placeholder="请输入邮箱" />
+      </view>
+      <view class="right" wx:if="{{indexCondition == 2}}">
+        <input bindinput="inputBindtap" placeholder="请输入SSN" />
+      </view>
+      <view class="right" wx:if="{{indexCondition == 3}}">
+        <picker bindchange="bindTypePickerChange" value="{{indexType}}" range="{{typeList}}" >
+          <text>{{typeList[indexType]}}</text>
+          <text class="triangle">▼</text>
+        </picker>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--订单内容-->
+<view class="order_content">
+  <!-- 头部 -->
+  <view class="order_title">个人消费记录</view>
+  <!-- 商品信息 -->
+  <view class="order_main" wx:for="{{list}}" wx:key="id"  enable-flex="true">
+    <view class="order_item">
+
+      <view class="order_info_wrap">
+        <view class="product_name">付款人：{{item.senderName}}</view>
+        <view class="product_name">收款人：{{item.receiverName}}</view>
+
+        <view class="product_price_wrap">
+          <view class="product_price">金额：{{item.value}}元</view>
+          <view class="product_price" style="color: black;">时间：{{item.time}}</view>
+        </view>
+
+      </view>
+
+    </view>
+
+  </view>
+</view>

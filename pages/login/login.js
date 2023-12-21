@@ -37,7 +37,7 @@ Page({
         console.log(res);
         if(res.code===0){
           wx.navigateTo({url: '../../pages/home/home'})
-          app.globalData.id=res.data.id
+          app.globalData.id=res.data.userId
         }
         else{
           this.setData({

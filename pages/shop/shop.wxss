@@ -12,6 +12,9 @@
   margin: 20rpx;
 }
 .nx_congar_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20rpx;
   color:#666;
   font-weight: bold;

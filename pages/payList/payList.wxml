@@ -1,0 +1,23 @@
+<!--pages/payList/payList.wxml-->
+<!--订单内容-->
+<view class="order_content">
+  <!-- 头部 -->
+  <view class="order_title">待支付记录</view>
+  <!-- 商品信息 -->
+  <view class="order_main" wx:for="{{list}}" wx:key="id"  enable-flex="true">
+    <view class="order_item" wx:if="{{item.status == 0}}">
+
+      <view class="order_info_wrap">
+        <view class="product_name">收款人：{{item.requesterName}}</view>
+        <view class="product_name">备注：{{item.remark}}</view>
+        <view class="product_price_wrap">
+          <view class="product_price">金额：{{item.value}}元</view>
+          <view class="product_price" style="color: black;">时间：{{item.createTime}}</view>
+        </view>
+        <button type="primary" style="width: 200rpx; height: 90rpx; display: block; box-sizing: border-box; right: 0rpx; top: 0rpx; position: relative" bindtap="payButton" data-index="{{index}}">支付</button>
+      </view>
+
+    </view>
+
+  </view>
+</view>

@@ -27,15 +27,16 @@ Page({
     // this.setData({
     //   goodsInfoCarouselList:list,
     // })
-    request({url:'/product/recommend',method:"GET",}).then(res =>{
+    // request({url:'/product/recommend',method:"GET",}).then(res =>{
+    //   this.setData({
+    //     goodsInfoCarouselList:res,
+    //   })
+    //   console.log(this.data.goodsInfoCarouselList)
+    // })
+    request({url:'/commodity/list-commodity',method:"GET",}).then(res =>{
+      console.log(res)
       this.setData({
-        goodsInfoCarouselList:res,
-      })
-      console.log(this.data.goodsInfoCarouselList)
-    })
-    request({url:'/product',method:"GET",}).then(res =>{
-      this.setData({
-        list:res,
+        list:res.data,
       })
       console.log(this.data.list)
     })

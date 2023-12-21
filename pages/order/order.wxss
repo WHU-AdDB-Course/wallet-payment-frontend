@@ -112,7 +112,7 @@
   border-radius: 20px;
   border: 1px solid black;
   padding: 20px;
-  width: 300px;
+  width: 250px;
   height: 150px;
   margin: auto;
 }
@@ -120,6 +120,21 @@
   border-radius: 20px;
   border: 1px solid black;
   padding: 20px;
-  width: 300px;
+  width: 250px;
   margin: auto;
+}
+.right {
+  color: rgb(110, 110, 110);
+}
+.triangle {
+  padding-left: 10rpx;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 25rpx 0;
+  margin: 0 20rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+  justify-content: space-between;
 }

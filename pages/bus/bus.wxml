@@ -1,7 +1,0 @@
-<!--pages/bus/bus.wxml-->
-<view style="position:fixed; top:0; width: 750rpx; background:#A1FFCE ;">
-  <view class='page-header'>
-      <text class='page-title' style="position: relative; left: 0rpx; top: 0rpx">学校交通</text>
-  </view>
-</view>
-<image src="/utils/picture/大小循环.jpg" background-size="cover" mode="scaleToFill" style="position: relative; left: 0rpx; top: 87rpx; width: 750rpx; height: 1300rpx; display: inline-block; box-sizing: border-box"></image>

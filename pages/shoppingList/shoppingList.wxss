@@ -62,7 +62,14 @@
 
 .order_content .order_main .order_item .order_info_wrap .product_price_wrap .order_num_tool .product_num{
   display: flex;
-  width: 55rpx;
+  width: 120rpx;
+  height: 55rpx;
+  justify-content: center;
+  align-items: center;
+}
+.order_content .order_main .order_item .order_info_wrap .product_price_wrap .order_num_tool .product_state{
+  display: flex;
+  width: 110rpx;
   height: 55rpx;
   justify-content: center;
   align-items: center;
