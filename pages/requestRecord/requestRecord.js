@@ -90,6 +90,22 @@ Page({
         data:info,
       }).then(res=>{
         console.log(res)
+        if (res.data) {
+          wx.navigateBack({
+            delta: 1  // 返回的页面数，1 表示返回上一个页面
+          });
+          wx.showToast({
+            title: '请求收款成功',
+            icon: 'none'
+          })
+        }
+        else {
+          wx.showToast({
+            title:res.message,
+            icon:'error',
+            duration: 2000//持续的时间
+          })
+        }
       })
     }
   },

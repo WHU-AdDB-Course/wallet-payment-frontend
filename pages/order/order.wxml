@@ -8,7 +8,7 @@
   <view class="order_main">
     <view class="order_item">
       <navigator class="order_img_wrap">
-        <image style="height: 150rpx;" src="{{pictureUrl}}"></image>
+        <image style="height: 150rpx;" src="../../utils/picture/中国联通.png"></image>
       </navigator>
       <view class="order_info_wrap">
         <view class="product_name">{{name}}</view>

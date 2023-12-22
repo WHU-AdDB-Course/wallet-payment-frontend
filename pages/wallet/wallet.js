@@ -23,7 +23,7 @@ Page({
         text: '发起收款',
       },{
         url: '../../pages/payList/payList',
-        text: '代付款',
+        text: '待付款',
       }
     ],
     items2: [

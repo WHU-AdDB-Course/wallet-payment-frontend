@@ -51,6 +51,13 @@ Page({
             icon: 'none'
           })
         }
+        else {
+          wx.showToast({
+            title:res.message,
+            icon:'error',
+            duration: 2000//持续的时间
+          })
+        }
       })
       console.log(info)
     }

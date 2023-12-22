@@ -105,7 +105,7 @@ Page({
         }
         else{
           wx.showToast({
-            title: res.data.message,
+            title: res.message,
             icon:'error',
             duration: 2000//持续的时间
           })  

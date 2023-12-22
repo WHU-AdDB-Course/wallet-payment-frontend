@@ -8,7 +8,7 @@
   <view class="order_main" wx:for="{{list}}" wx:key="id"  enable-flex="true">
     <view class="order_item">
       <view class="order_img_wrap">
-        <image style="height: 150rpx;" src="{{item.pictureUrl}}"></image>
+        <image style="height: 150rpx;" src="../../utils/picture/中国联通.png"></image>
       </view>
       <view class="order_info_wrap">
         <view class="product_name">{{item.commodityName}}</view>
